@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Identificación:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNombres"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Nombres:"
+        app:layout_constraintStart_toStartOf="@+id/textViewId"
+        app:layout_constraintTop_toBottomOf="@+id/textViewId" />
+
+    <TextView
+        android:id="@+id/textViewApellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Apellidos:"
+        app:layout_constraintStart_toStartOf="@+id/textViewNombres"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNombres" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewId"
+        app:layout_constraintTop_toTopOf="@+id/textViewId" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNombres"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
+        app:layout_constraintTop_toTopOf="@+id/textViewNombres" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewApellidos"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toTopOf="@+id/textViewApellidos" />
+
+    <Button
+        android:id="@+id/buttonBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Buscar"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAgregar"
+        app:layout_constraintStart_toStartOf="@+id/buttonAgregar"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAgregar" />
+
+    <Button
+        android:id="@+id/buttonAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Agregar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonLastName" />
+
+    <Button
+        android:id="@+id/buttonModificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Modificar"
+        app:layout_constraintEnd_toEndOf="@+id/buttonBuscar"
+        app:layout_constraintStart_toStartOf="@+id/buttonBuscar"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBuscar" />
+
+    <Button
+        android:id="@+id/buttonEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Eliminar"
+        app:layout_constraintEnd_toEndOf="@+id/buttonModificar"
+        app:layout_constraintStart_toStartOf="@+id/buttonModificar"
+        app:layout_constraintTop_toBottomOf="@+id/buttonModificar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
